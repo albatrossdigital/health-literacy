@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd:'<%= app %>/',
-					src: ['CNAME', 'fonts/**', 'vendor/**', '**/*.html', '!**/*.scss', '!bower_components/**'],
+					src: ['CNAME', 'favicon.ico', 'fonts/**', 'vendor/**', '**/*.html', '!**/*.scss', '!bower_components/**'],
 					dest: '<%= dist %>/'
 				} , {
 					expand: true,
@@ -76,17 +76,16 @@ module.exports = function(grunt) {
 			},
 		},
 
-		// @todo: re-enable (jeff can't run w this)
-		//imagemin: {
-		//	target: {
-		//		files: [{
-		//			expand: true,
-		//			cwd: '<%= app %>/images/',
-		//			src: ['**/*.{jpg,gif,svg,jpeg,png}'],
-		//			dest: '<%= dist %>/images/'
-		//		}]
-		//	}
-		//},
+		imagemin: {
+			target: {
+				files: [{
+					expand: true,
+					cwd: '<%= app %>/images/',
+					src: ['**/*.{jpg,gif,svg,jpeg,png}'],
+					dest: '<%= dist %>/images/'
+				}]
+			}
+		},
 
 		uglify: {
 			options: {
@@ -127,8 +126,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// @todo: Phantom.js doesn't work for JEff
-		/*connect: {
+		connect: {
 			app: {
 				options: {
 					port: 9005,
@@ -175,38 +173,37 @@ module.exports = function(grunt) {
 	        }
 				}
 			}
-		},*/
+		},
 
-		// @todo (throws weak err for jeff)
-		//wiredep: {
-		//	target: {
-		//		src: [
-		//			'<%= app %>/**/*.html',
-		//			'!<%= app %>/snapshots/*.html'
-		//		],
-		//		exclude: [
-		//			'modernizr',
-		//			'font-awesome',
-		//			'jquery-placeholder',
-		//			'jquery.cookie',
-		//			'foundation'
-		//		]
-		//	}
-		//},
-		//'node-inspector': {
-		//  custom: {
-		//    options: {
-		//    	'web-port': 8081, 
-		//    	'debug-port': 5856,
-		//      'web-host': 'localhost'
-		//    }
-		//  }
-		//},
-		//execute: {
-    //  target: {
-    //    src: ['phantomscreenshots.js']
-    //  }
-	  //}
+		wiredep: {
+			target: {
+				src: [
+					'<%= app %>/**/*.html',
+					'!<%= app %>/snapshots/*.html'
+				],
+				exclude: [
+					'modernizr',
+					'font-awesome',
+					'jquery-placeholder',
+					'jquery.cookie',
+					'foundation'
+				]
+			}
+		},
+		'node-inspector': {
+		  custom: {
+		    options: {
+		    	'web-port': 8081, 
+		    	'debug-port': 5856,
+		      'web-host': 'localhost'
+		    }
+		  }
+		},
+		execute: {
+      target: {
+        src: ['phantomscreenshots.js']
+      }
+	  }
 
 	});
 
@@ -217,13 +214,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'watch']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
-	// @todo (throws weak err for jeff)
-	//grunt.registerTask('server-phantom', ['connect:distQuick']);
+	grunt.registerTask('server-phantom', ['connect:distQuick']);
 
 	grunt.registerTask('gh-pages', ['clean:ghpages', 'copy:ghpages']);
 	
-	grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'useminPrepare', 'copy:dist', 'concat', 'cssmin', 'uglify', 'usemin']);
-	// @todo: change line above to (jeff can't run imagemin)
-	//grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin', 'connect:distQuick', 'execute']);
+	grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin', 'connect:distQuick', 'execute']);
 
 };
