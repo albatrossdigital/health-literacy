@@ -20,35 +20,35 @@ angular.module('app.use')
         if(!data) {
           var result = {
             'scenario': {
-              'title': 'Elegir un escenario',
+              'title': 'Pick a scenario',
               'options': [
                 {
-                  'title': 'Malestar',
+                  'title': 'Feeling a little sick',
                   'id': 'sick'
                 },
                 {
-                  'title': 'Cortada fea',
+                  'title': 'Got a nasty cut',
                   'id': 'cut'
                 },
                 {
-                  'title': 'Cree que puede tener apendicitis',
+                  'title': 'Might have appendicitis',
                   'id': 'major'
                 }
               ],
             },
             'action': {
-              'title': '¿Adónde vas?',
+              'title': 'Where do you go?',
               'options': [
                 {
-                  'title': 'Atención primaria',
+                  'title': 'Doctor\'s Office',
                   'id': 'doctor'
                 },
                 {
-                  'title': 'Atención urgente',
+                  'title': 'Urgent Care Clinic',
                   'id': 'clinic'
                 },
                 {
-                  'title': 'Sala de emergencia',
+                  'title': 'Emergency Room',
                   'id': 'emergency'
                 }
               ],
@@ -58,7 +58,7 @@ angular.module('app.use')
                 {// Feeling Sick - PRIMARY
                   'stories': [
                     {
-                      text: 'Ha estado pagando su cuota mensual de $220 para el seguro médico, para tener cobertura cuando necesite atención médica.',
+                      text: 'You\'ve been paying your monthly premium of $220 for health insurance, so you have coverage when you need health care.',
                       costs: {
                         'insured': [/*
                           {
@@ -80,11 +80,11 @@ angular.module('app.use')
                       hint: false
                     },
                     {
-                      text: 'Es posible que deba pagar un copago para consultar a su proveedor de atención médica primaria (médico) cuando esté enfermo.',
+                      text: 'You may have to pay a copay to see your Primary Care Provider (doctor) when you\'re sick.',
                       costs: {
                         'insured': [
                           {
-                            label: "Copago",
+                            label: "Copay",
                             group: 'copay',
                             amount: 25,
                           },
@@ -101,16 +101,16 @@ angular.module('app.use')
                       hint: false
                     },
                     {
-                      text: 'Su proveedor de atención médica primaria le recomienda que consulte a un especialista. El especialista le sugiere que se realice un análisis de sangre y una resonancia magnética*. El copago del especialista es más que el copago del proveedor de atención médica primaria. También, deberá pagar un coaseguro por la RM y el análisis de sangre.',
+                      text: 'Your Primary Care Provider recommends you see a specialist. The specialist wants you to get a blood test and an MRI*. Your copay for the specialist is more than your copay for your Primary Care Provider. You’ll also have to pay coinsurance for the MRI and blood test.',
                       costs: {
                         'insured': [
                           {
-                            label: "Copago",
+                            label: "Copay",
                             group: 'copay',
                             amount: 60,
                           },
                           {
-                            label: "Coaseguro para el análisis de sangre y la RM",
+                            label: "Coinsurance for blood test & MRI",
                             group: 'coinsurance',
                             amount: 450,
                           },
@@ -133,49 +133,49 @@ angular.module('app.use')
                       img: 'FeelingSick_Primary_3.png',
                       showCosts: true,
                       hint: [
-                        '*La RM (resonancia magnética) es una prueba de diagnóstico por imágenes.'
+                        '*MRI (Magnetic Resonance Imaging) is a body imaging test.'
                       ]
                     },
                   ],
                   'groups': {
                     'premium': {
-                      'label': 'Cuota',
+                      'label': 'Premium',
                       'weight': 0
                     },
                     'copay': {
-                      'label': '2 copagos',
+                      'label': '2 Copays',
                       'weight': 1
                     },
                     'coinsurance': {
-                      'label': 'Coaseguro para análisis de sangre y RM',
+                      'label': 'Coinsurance for Blood test & MRI',
                       'weight': 2
                     },
                     'primary': {
-                      'label': 'Visita de atención médica primaria',
+                      'label': 'Primary Care visit',
                       'weight': 1
                     },
                     'specialty': {
-                      'label': 'Visita de atención de especialidad',
+                      'label': 'Specialty Care visit',
                       'weight': 2
                     },
                     'blood': {
-                      'label': 'Análisis de sangre',
+                      'label': 'Blood test/MRI',
                       'weight': 3
                     },
                     'mri': {
-                      'label': 'RM',
+                      'label': 'MRI',
                       'weight': 4
                     }
                   },
                   'results': {
-                    'text': '¡Buenas noticias! Sus pruebas muestran que está sano. Pero el análisis de sangre muestra que tiene el colesterol un poco alto y su proveedor de atención médica primaria desea que lo controle.',
-                    'hint': 'Tenga en cuenta que los costos son ejemplos. Los costos reales variarán en función de su plan de seguro médico, el nivel de cobertura y el lugar en el que obtenga la cobertura.'
+                    'text': 'Good news! Your tests show you are healthy. But your blood test shows that your cholesterol is a little high, and your Primary Care Provider wants you to keep an eye on it.',
+                    'hint': 'Please note: These costs are an example. Actual costs will vary based on your health insurance plan, level of coverage, and where you get your care.'
                   }
                 },
                 {// Feeling Sick - URGENT
                   'stories': [
                     {
-                      text: 'Ha estado pagando su cuota mensual de $220 para el seguro médico, para tener cobertura cuando necesite atención médica.',
+                      text: 'You\'ve been paying your monthly premium of $220 for health insurance, so you have coverage when you need health care.',
                       costs: {
                         'insured': [/*
                           {
@@ -197,11 +197,11 @@ angular.module('app.use')
                       hint: false
                     },
                     {
-                      text: 'Cuesta más recibir atención urgente que visitar al proveedor de atención médica primaria. Usted tiene un copago o un coaseguro mayor.',
+                      text: 'It costs more to go to Urgent Care than to your Primary Care Provider. You owe a larger copay or coinsurance.',
                       costs: {
                         'insured': [
                           {
-                            label: "Coaseguro",
+                            label: "Coinsurance",
                             group: 'coinsurance',
                             amount: 75
                           },
@@ -218,16 +218,16 @@ angular.module('app.use')
                       hint: false
                     },
                     {
-                      text: 'El médico o la enfermera profesional de atención urgente lo envía para que se realice una RM* y un análisis de sangre. Por estas pruebas también debe pagar un coaseguro.',
+                      text: 'The doctor or nurse practitioner at Urgent Care sends you to get an MRI* and blood test. You have to pay coinsurance for these tests, too.',
                       costs: {
                         'insured': [
                           {
-                            label: "Análisis de sangre",
+                            label: "Blood test",
                             group: 'blood',
                             amount: 55
                           },
                           {
-                            label: "RM",
+                            label: "MRI Coinsurance",
                             group: 'mri',
                             amount: 1000
                           },
@@ -246,41 +246,41 @@ angular.module('app.use')
                       img: 'FeelingSick_Primary_3.png',
                       showCosts: true,
                       hint:  [
-                        '*La RM (resonancia magnética) es una prueba de diagnóstico por imágenes.'
+                        '*MRI (Magnetic Resonance Imaging) is a body imaging test.'
                       ]
                     },
                   ],
                   'groups': {
                     'premium': {
-                      'label': 'Cuota',
+                      'label': 'Premium',
                       'weight': 0
                     },
                     'coinsurance': {
-                      'label': 'Coaseguro',
+                      'label': 'Coinsurance',
                       'weight': 1
                     },
                     'visit': {
-                      'label': 'Visita de atención urgente',
+                      'label': 'Urgent Care visit',
                       'weight': 1
                     },
                     'blood': {
-                      'label': 'Análisis de sangre',
+                      'label': 'Blood test',
                       'weight': 2
                     },
                     'mri': {
-                      'label': 'RM',
+                      'label': 'MRI',
                       'weight': 3
                     }
                   },
                   'results': {
-                    'text': '¡Buenas noticias! Sus pruebas muestran que está sano. Pero el análisis de sangre muestra que tiene el colesterol un poco alto y su proveedor desea que lo monitoré.',
-                    'hint': 'Tenga en cuenta que los costos se presentan a modo de ejemplo. Los costos reales variarán en función de su plan de seguro médico, el nivel de cobertura y el lugar en el que obtenga la cobertura.'
+                    'text': 'Good news! Your tests show you are healthy. But your blood test shows that your cholesterol is a little high, and your provider wants you to keep an eye on it.',
+                    'hint': 'Please note: These costs are an example. Actual costs will vary based on your health insurance plan, level of coverage, and where you get your care.'
                   }
                 },
                 {// Feeling Sick - ER
                   'stories': [
                     {
-                      text: 'Ha estado pagando su cuota mensual de $220 para el seguro médico, para tener cobertura cuando necesite atención médica.',
+                      text: 'You\'ve been paying your monthly premium of $220 for health insurance, so you have coverage when you need health care.',
                       costs: {
                         'insured': [/*
                           {
@@ -302,11 +302,11 @@ angular.module('app.use')
                       hint: false
                     },
                     {
-                      text: 'Cuesta más acudir a la sala de emergencia que al proveedor de atención médica primaria o que recibir atención urgente. Tendrá un coaseguro más alto o un copago mayor para asistir a una consulta.',
+                      text: 'It costs more to go to the Emergency Room than to your Primary Care Provider or Urgent Care. You will owe higher coinsurance or a large copay to be seen.',
                       costs: {
                         'insured': [
                           {
-                            label: "Copago",
+                            label: "Copay",
                             group: 'copay',
                             amount: 500
                           },
@@ -323,16 +323,16 @@ angular.module('app.use')
                       hint: false
                     },
                     {
-                      text: 'El médico o la enfermera profesional de la sala de emergencia lo envía para que se realice una RM* y un análisis de sangre. Por estas pruebas también debe pagar un coaseguro.',
+                      text: 'The doctor or nurse practitioner at the ER sends you to get an MRI* and blood test. You have to pay coinsurance for these tests, too.',
                       costs: {
                         'insured': [
                           {
-                            label: "Análisis de sangre",
+                            label: "Blood test",
                             group: 'blood',
                             amount: 150
                           },
                           {
-                            label: "Coaseguro de la RM",
+                            label: "MRI Coinsurance",
                             group: 'mri',
                             amount: 1750
                           },
@@ -355,39 +355,39 @@ angular.module('app.use')
                       img: 'FeelingSick_Primary_3.png',
                       showCosts: true,
                       hint: [
-                        '*La RM (resonancia magnética) es una prueba de diagnóstico por imágenes.'
+                        '*MRI (Magnetic Resonance Imaging) is a body imaging test.'
                       ]
                     },
                   ],
                   'groups': {
                     'premium': {
-                      'label': 'Cuota',
+                      'label': 'Premium',
                       'weight': 0
                     },
                     'copay': {
-                      'label': 'Copago',
+                      'label': 'Copay',
                       'weight': 1
                     },
                     'visit': {
-                      'label': 'Visita a la sala de emergencia',
+                      'label': ' ER visit',
                       'weight': 1
                     },
                     'blood': {
-                      'label': 'Análisis de sangre',
+                      'label': 'Blood test',
                       'weight': 2
                     },
                     'mri': {
-                      'label': 'RM',
+                      'label': 'MRI',
                       'weight': 3
                     },
                     'facility': {
-                      'label': 'Cargos del centro',
+                      'label': 'Facility fee',
                       'weight': 4
                     }
                   },
                   'results': {
-                    'text': '¡Buenas noticias! Sus pruebas muestran que está sano. Pero el análisis de sangre muestra que tiene el colesterol un poco alto y su proveedor desea que lo controle.',
-                    'hint': 'Tenga en cuenta que los costos se presentan a modo de ejemplo. Los costos reales variarán en función de su plan de seguro médico, el nivel de cobertura y el lugar en el que obtenga la cobertura.'
+                    'text': 'You check out as healthy after the tests. You just had a bad virus, but your Primary Care Provider wants you to keep an eye on your cholesterol.',
+                    'hint': 'Please note: These costs are an example. Actual costs will vary based on your health insurance plan, level of coverage, and where you get your care.'
                   }
                 } 
               ],
@@ -395,7 +395,7 @@ angular.module('app.use')
                 {// Nasty Cut - PRIMARY
                   'stories': [
                     {
-                      text: 'Ha estado pagando su cuota mensual de $220 para el seguro médico, para tener cobertura cuando necesite atención médica.',
+                      text: 'You\'ve been paying your monthly premium of $220 for health insurance, so you have coverage when you need health care.',
                       costs: {
                         'insured': [
                           /*{
@@ -417,16 +417,16 @@ angular.module('app.use')
                       hint: false
                     },
                     {
-                      text: 'Si la cortada no es muy grave, es posible que el proveedor de atención médica primaria habitual pueda aplicar las puntadas. Llámelo primero para averiguar.',
+                      text: 'If the cut is not too bad, your regular Primary Care Provider may be able to stitch you up. Call them first to find out.',
                       costs: {
                         'insured': [
                           {
-                            label: "Copago",
+                            label: "Copay",
                             group: 'copay',
                             amount: 25,
                           },
                           {
-                            label: "Limpieza de herida/suturas",
+                            label: "Cleaning wound / stitches",
                             group: 'coinsurance',
                             amount: 75,
                           },
@@ -447,16 +447,16 @@ angular.module('app.use')
                       hint: false
                     },
                     {
-                      text: '¡Oh, no! Su cortada comienza a parecerse a una herida de las que se ven en las películas de terror. Se está infectando. Suele suceder, no entre en pánico. Simplemente, resuélvalo. Regresa al proveedor para que le realice una limpieza y le vuelvan a poner puntadas.',
+                      text: 'Oh no! Your cut starts to look a little like something from a horror film. It\'s getting infected. It happens, so don\'t freak out. Just get it taken care of! You go back to your provider to get it cleaned and stitched again.',
                       costs: {
                         'insured': [
                           {
-                            label: "Copago",
+                            label: "Copay",
                             group: 'copay',
                             amount: 25,
                           },
                           {
-                            label: "Limpieza completa/suturas",
+                            label: "Thorough cleaning / stitching",
                             group: 'coinsurance',
                             amount: 90,
                           },
@@ -479,35 +479,35 @@ angular.module('app.use')
                   ],
                   'groups': {
                     'premium': {/*
-                      'label': 'Cuota',
+                      'label': 'Premium',
                       'weight': 0
                     */},
                     'copay': {
-                      'label': '2 copagos',
+                      'label': '2 Copays',
                       'weight': 1
                     },
                     'coinsurance': {
-                      'label': 'Coaseguro para 2 visitas',
+                      'label': 'Coinsurance for 2 visits',
                       'weight': 2
                     },
                     'visit': {
-                      'label': '2 visitas al médico',
+                      'label': '2 Doctor visits',
                       'weight': 1
                     },
                     'stitches': {
-                      'label': '2 instancias de puntadas',
+                      'label': '2 rounds of stitches',
                       'weight': 2
                     }
                   },
                   'results': {
-                    'text': 'Después de una semana, las puntadas están listas para quitarse y usted está recuperado.',
-                    'hint': 'Tenga en cuenta que los costos son ejemplos. Los costos reales variarán en función de su plan de seguro médico, el nivel de cobertura y el lugar en el que obtenga la cobertura.'
+                    'text': 'After about a week, your stitches are ready to come out and you\'re on the mend.',
+                    'hint': 'Please note: These costs are an example. Actual costs will vary based on your health insurance plan, level of coverage, and where you get your care.'
                   }
                 },
                 {// Nasty Cut - URGENT
                   'stories': [
                     {
-                      text: 'Ha estado pagando su cuota mensual de $220 para el seguro médico, para tener cobertura cuando necesite atención médica.',
+                      text: 'You\'ve been paying your monthly premium of $220 for health insurance, so you have coverage when you need health care.',
                       costs: {
                         'insured': [/*
                           {
@@ -529,16 +529,16 @@ angular.module('app.use')
                       hint: false
                     },
                     {
-                      text: 'Se dirige a la atención urgente para que lo suturen.',
+                      text: 'You head to Urgent Care to get stitched up.',
                       costs: {
                         'insured': [
                           {
-                            label: "Copago",
+                            label: "Copay",
                             group: 'copay',
                             amount: 75,
                           },
                           {
-                            label: "Coaseguro/suturas",
+                            label: "Coinsurance / Stitches",
                             group: 'coinsurance',
                             amount: 175,
                           },
@@ -559,16 +559,16 @@ angular.module('app.use')
                       hint: false
                     },
                     {
-                      text: '¡Oh, no! Su cortada comienza a parecerse a una herida de las que se ven en las películas de terror. Se está infectando. Suele suceder, no entre en pánico. Simplemente resuelvalo. Regresa a la atención urgente para que le vuelvan a realizar una limpieza y le vuelvan a poner puntadas.',
+                      text: 'Oh no! Your cut starts to look a little like something from a horror film. It\'s getting infected. It happens, so don\'t freak out. Just get it taken care of! You go back to Urgent Care to get it cleaned and stitched again.',
                       costs: {
                         'insured': [
                           {
-                            label: "Copago",
+                            label: "Copay",
                             group: 'copay',
                             amount: 75,
                           },
                           {
-                            label: "Coaseguro/suturas",
+                            label: "Coinsurance / Stitches",
                             group: 'coinsurance',
                             amount: 200,
                           },
@@ -591,35 +591,35 @@ angular.module('app.use')
                   ],
                   'groups': {
                     'premium': {/*
-                      'label': 'Cuota',
+                      'label': 'Premium',
                       'weight': 0
                     */},
                     'copay': {
-                      'label': 'Copagos',
+                      'label': 'Copays',
                       'weight': 1
                     },
                     'coinsurance': {
-                      'label': 'Coaseguros',
+                      'label': 'Coinsurance',
                       'weight': 2
                     },
                     'visit': {
-                      'label': 'Visitas al médico',
+                      'label': 'Doctor visits',
                       'weight': 1
                     },
                     'stitches': {
-                      'label': 'Instancias de puntadas',
+                      'label': 'Cleanings / Stitches',
                       'weight': 2
                     }
                   },
                   'results': {
-                    'text': 'Después de una semana, las puntadas están listas para quitarse y usted está recuperado.',
-                    'hint': 'Tenga en cuenta que los costos son ejemplos. Los costos reales variarán en función de su plan de seguro médico, el nivel de cobertura y el lugar en el que obtenga la cobertura.'
+                    'text': 'After about a week, your stitches are ready to come out and you\'re on the mend.',
+                    'hint': 'Please note: These costs are an example. Actual costs will vary based on your health insurance plan, level of coverage, and where you get your care.'
                   }
                 },
                 {// Nasty Cut - ER
                   'stories': [
                     {
-                      text: 'Ha estado pagando su cuota mensual de $220 para el seguro médico, para tener cobertura cuando necesite atención médica.',
+                      text: 'You\'ve been paying your monthly premium of $220 for health insurance, so you have coverage when you need health care.',
                       costs: {
                         'insured': [/*
                           {
@@ -641,16 +641,16 @@ angular.module('app.use')
                       hint: false
                     },
                     {
-                      text: 'Se dirige a la sala de emergencia (en especial si sangra mucho) para que le curen la herida.',
+                      text: 'You head to the Emergency Room (especially if you\'re bleeding badly) to get that gash taken care of.',
                       costs: {
                         'insured': [
                           {
-                            label: "Copago",
+                            label: "Copay",
                             group: 'copay',
                             amount: 500,
                           },
                           {
-                            label: "Coaseguro/suturas",
+                            label: "Coinsurance / Stitches",
                             group: 'coinsurance',
                             amount: 250,
                           },
@@ -671,16 +671,16 @@ angular.module('app.use')
                       hint: false
                     },
                     {
-                      text: '¡Oh, no! Su cortada comienza a parecerse a una herida de las que se ven en las películas de terror. Se está infectando. Suele suceder, no entre en pánico. Simplemente resuélvalo. Regresa a la sala de emergencia para que le vuelvan a realizar una limpieza y le pongan puntadas.',
+                      text: 'Oh no! Your cut starts to look a little like something from a horror film. It\'s getting infected. It happens, so don\'t freak out. Just get it taken care of! You go back to the ER to get it cleaned and stitched again.',
                       costs: {
                         'insured': [
                           {
-                            label: "Copago",
+                            label: "Copay",
                             group: 'copay',
                             amount: 500,
                           },
                           {
-                            label: "Coaseguro/suturas",
+                            label: "Coinsurance / Stitches",
                             group: 'coinsurance',
                             amount: 250,
                           },
@@ -703,29 +703,29 @@ angular.module('app.use')
                   ],
                   'groups': {
                     'premium': {/*
-                      'label': 'Cuota',
+                      'label': 'Premium',
                       'weight': 0
                     */},
                     'copay': {
-                      'label': '2 copagos',
+                      'label': '2 Copays',
                       'weight': 1
                     },
                     'coinsurance': {
-                      'label': 'Coaseguro para 2 instancias de puntadas',
+                      'label': 'Coinsurance for 2 rounds of stitches',
                       'weight': 2
                     },
                     'visit': {
-                      'label': '2 visitas a la sala de emergencia',
+                      'label': '2 visits to ER',
                       'weight': 1
                     },
                     'stitches': {
-                      'label': '2 instancias de puntadas',
+                      'label': '2 rounds of stitches',
                       'weight': 2
                     },
                   },
                   'results': {
-                    'text': 'Después de una semana, las puntadas están listas para quitarse y usted está recuperado.',
-                    'hint': 'Tenga en cuenta que los costos son ejemplos. Los costos reales variarán en función de su plan de seguro médico, el nivel de cobertura y el lugar en el que obtenga la cobertura.'
+                    'text': 'After a few days to a week, your stitches are ready to come out and you\'re on the mend.',
+                    'hint': 'Please note: These costs are an example. Actual costs will vary based on your health insurance plan, level of coverage, and where you get your care.'
                   }
                 } 
               ],
@@ -734,7 +734,7 @@ angular.module('app.use')
                   'stories': [],
                   'override': true,
                   'results': {
-                    'text': '¡Espere un minuto! Ese dolor agudo e intenso del lado derecho del estómago podría ser grave. Si considera que tiene apendicitis, ¡ACUDA A LA SALA DE EMERGENCIA!'
+                    'text': 'Wait a minute! That sharp, intense pain on the right side of your stomach could be serious. If you think you have appendicitis, GO TO THE EMERGENCY ROOM!!'
                   },
                   img: 'Appendicitis_Primary_1.png'
                 },
@@ -742,14 +742,14 @@ angular.module('app.use')
                   'stories': [],
                   'override': true,
                   'results': {
-                    'text': '¡Espere un minuto! Ese dolor agudo e intenso del lado derecho del estómago podría ser grave. Si considera que tiene apendicitis, ¡ACUDA A LA SALA DE EMERGENCIA!'
+                    'text': 'Wait a minute! That sharp, intense pain on the right side of your stomach could be serious. If you think you have appendicitis, GO TO THE EMERGENCY ROOM!!'
                   },
                   img: 'Appendicitis_Primary_1.png'
                 },
                 {// Appendicitis - ER
                   'stories': [
                     {
-                      text: 'Ha estado pagando su cuota mensual de $220 para el seguro médico, para tener cobertura cuando necesite atención médica.',
+                      text: 'You\'ve been paying your monthly premium of $220 for health insurance, so you have coverage when you need health care.',
                       costs: {
                         'insured': [
                           /*{
@@ -759,7 +759,7 @@ angular.module('app.use')
                             suffix: '/month'
                           },*/
                           {
-                            label: "Desembolso",
+                            label: "Pocket",
                             group: 'outofpocket',
                             amount: 4600
                           },
@@ -776,11 +776,11 @@ angular.module('app.use')
                       hint: false
                     },
                     {
-                      text: 'En la sala de emergencia, la tomografía computarizada muestra que el apéndice está a punto de reventar. Debe permanecer en el hospital.',
+                      text: 'In the Emergency Room, a CT scan shows your appendix is ready to burst. You have to stay in the hospital.',
                       costs: {
                         'insured': [
                           {
-                            label: "Tomografía computarizada",
+                            label: "CT scan",
                             group: 'scan',
                             amount: 2000
                           }
@@ -789,14 +789,14 @@ angular.module('app.use')
                       },
                       img: 'Appendicitis_ER_2.png',
                       showCosts: true,
-                      hint: ["Con esta cantidad, cumple con el deducible de su seguro médico."]
+                      hint: ["You just hit your health insurance deductible."]
                     },
                     {
-                      text: 'Le han extraído el apéndice y permanecerá en el hospital durante 3 días para recuperarse. Debido a que alcanzó su deducible, paga el 20% del resto de los costos hasta alcanzar el desembolso máximo.',
+                      text: 'You have your appendix removed and you\'re in the hospital for 3 days to recover. Since you met your deductible, you pay 20% of the rest of the costs until you reach your out-of-pocket maximum.',
                       costs: {
                         'insured': [
                           {
-                            label: "Costo general",
+                            label: "Overall Cost",
                             group: 'overall',
                             amount: 30000,
                             skipCount: true
@@ -823,47 +823,47 @@ angular.module('app.use')
                       },
                       img: 'Appendicitis_ER_3.png',
                       showCosts: true,
-                      hint: ['Usted paga $4,600 para alcanzar su desembolso máximo y su seguro médico paga el resto.']
+                      hint: ['You pay $4,600 to reach your out-of-pocket maximum and your health insurance pays for the rest!']
                     },
                   ],
                   'groups': {
                     'premium': {
-                      'label': 'Cuota',
+                      'label': 'Premium',
                       'weight': 0
                     },
                     'scan': {
-                      'label': 'Deducible/Tomografía computarizada',
+                      'label': 'Deductible / CT scan',
                       'weight': 1
                     },
                     'outofpocket': {
-                      'label': 'Costos para alcanzar el desembolso máximo',
+                      'label': 'Costs to reach Out-of-pocket Max',
                       'weight': 2,
                     },
                     'overall': {
-                      'label': 'Total',
+                      'label': 'Overall',
                       'weight': 3,
                       'hide': true
                     },
                     'supplies': {
-                      'label': 'Prueba/suministros',
+                      'label': 'Testing/supplies',
                       'weight': 0
                     },
                     'surgery': {
-                      'label': 'Cirugía',
+                      'label': 'Surgery',
                       'weight': 1
                     },
                     'hospital': {
-                      'label': 'Estadía en el hospital',
+                      'label': 'Hospital stay',
                       'weight': 2
                     },
                     'pharmacy': {
-                      'label': 'Costos de la farmacia',
+                      'label': 'Pharmacy costs',
                       'weight': 3
                     },
                   },
                   'results': {
-                    'text': '¡Eso estuvo cerca! Pero su seguro le ayudó a protegerse de entrar en deuda para pagar por una emergencia de la cual no tuvo control.',
-                    'hint': 'Tenga en cuenta que los costos son ejemplos. Los costos reales variarán en función de su plan de seguro médico, el nivel de cobertura y el lugar en el que obtenga la cobertura.'
+                    'text': 'That was a close call, but thankfully your insurance helped protect you from going into debt to pay for an emergency you had no control over.',
+                    'hint': 'Please note: These costs are an example. Actual costs will vary based on your health insurance plan, level of coverage, and where you get your care.'
                   }
                 } 
               ]
