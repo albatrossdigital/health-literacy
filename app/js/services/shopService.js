@@ -125,7 +125,7 @@ angular.module('app.shop')
                 ]
               },
               {
-                'question': 'Is your monthly income in the range shown on <a open-reveal="compareModal">this chart</a>? (if below these ranges, you may qualify for Medicaid a low cost state insurance program)',
+                'question': 'Is your monthly income in the range shown on <a open-reveal="compareModal">this chart</a>? If so, you may qualify for reduced costs for your copays, coinsurance, and deductible with a silver level plan in addition to financial assistance to lower your premiums (If below these ranges, you may qualify for Medicaid a low cost state insurance program.)',
                 'options': [
                   {
                     'label': 'Yes',
@@ -145,55 +145,57 @@ angular.module('app.shop')
                 'label': 'Bronze',                
                 'text': 'Bronze plans have lower premiums, but higher deductibles and out-of-pocket costs.',
                 'stats': {
-                  'premium': '$128',
-                  'deductible': '$6,500',
-                  'outOfPocket': '$6,500',
+                  'premium': '$215',
+                  'deductible': '$6,000',
+                  'outOfPocket': '$6,800',
                   'preventiveCare': '$0',
-                  'primaryCare': '100% *',
-                  'specialtyCare': '100% *',
-                  'copay': '100% *',
-                  'hospital': '100% *',
-                  'genericDrugs': '$20/100% *',
-                  'specialtyDrugs': '100% *',
-                  'xray': '100% *'
+                  'primaryCare': '$50',
+                  'specialtyCare': '50% *',
+                  'copay': '50% *',
+                  'hospital': '50% *',
+                  'genericDrugs': '$50% *',
+                  'specialtyDrugs': '50% *',
+                  'xray': '50% *'
                 },
-                'note': '* Until deductible met'
+                'note': '* You pay this percentage after you have paid the deductible amount. You have to pay 100% of the costs before you reach your deductible.'
               },
               {
                 'key': 'silver',
                 'label': 'Silver',
                 'text': 'Silver level plans are often the most popular with moderate premiums and moderate deductibles and out-of-pocket costs.',
                 'stats': {
-                  'premium': '$220',
-                  'deductible': '$2,050',
-                  'outOfPocket': '$6,600',
+                  'premium': '$275',
+                  'deductible': '$2,500',
+                  'outOfPocket': '$6,800',
                   'preventiveCare': '$0',
-                  'primaryCare': '$25',
+                  'primaryCare': '$30',
                   'specialtyCare': '$60',
-                  'copay': '$500',
-                  'hospital': '40%',
-                  'genericDrugs': '$15/$40',
-                  'specialtyDrugs': '40%',
-                  'xray': '40%'
-                }
+                  'copay': '30% *',
+                  'hospital': '30% *',
+                  'genericDrugs': '$15/$55',
+                  'specialtyDrugs': '$570',
+                  'xray': '30% *'
+                },
+		'note': '* You pay this percentage after you have paid the deductible amount. You have to pay 100% of the costs before you reach your deductible.'
               },
               {
                 'key': 'gold',
                 'label': 'Gold',
                 'text': 'A Gold level plan may be right for you, if you think you will use more health care services. Gold level plans have higher premiums, but lower deductibles and out-of-pocket costs.',
                 'stats': {
-                  'premium': '$270',
-                  'deductible': '$1,000',
-                  'outOfPocket': '$3,750',
+                  'premium': '$335',
+                  'deductible': '$2,000',
+                  'outOfPocket': '$3,500',
                   'preventiveCare': '$0',
-                  'primaryCare': '$30',
-                  'specialtyCare': '$60',
-                  'copay': '$350',
-                  'hospital': '35%',
-                  'genericDrugs': '$0/$30',
-                  'specialtyDrugs': '35%',
-                  'xray': '35%'
-                }
+                  'primaryCare': '$20',
+                  'specialtyCare': '$40',
+                  'copay': '$250',
+                  'hospital': '20% *',
+                  'genericDrugs': '$10/$25',
+                  'specialtyDrugs': '$350',
+                  'xray': '20% *'
+                },
+		'note': '* You pay this percentage after you have paid the deductible amount. You have to pay 100% of the costs before you reach your deductible.'
               }
             ],
             // PLANS
