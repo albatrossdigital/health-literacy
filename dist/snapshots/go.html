@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" ng-attr-content="{{metaDescription()}}" content="Health Literacy is an educational site giving straight forward info on healthcare options">
     <meta name="keywords" ng-attr-content="{{metaKeywords()}}" content="Health Literacy, Health, Education, Colorado, Healthcare">
-    <title ng-bind="pageTitle();" class="ng-binding">About | Health Literacy</title>
+    <title ng-bind="pageTitle();" class="ng-binding">Health Literacy</title>
     <link rel="stylesheet" href="css/libraries.min.css">
     <link rel="stylesheet" href="css/app.min.css">
     <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="//use.typekit.com/aje6baa.js" type="text/javascript" async=""></script><script type="text/javascript">
@@ -61,40 +61,14 @@
             <i class="fa fa-plus"></i> Get Insurance
           </a>
         </div></div></header>
-        <!-- uiView:  --><main id="main" class="main full-height transform ng-scope" ui-view=""><div class="full-all white-background page-section ng-scope">
-  <div class="choice-header">
-    <h2>CoveredU</h2>
+        <!-- uiView:  --><main id="main" class="main full-height transform ng-scope" ui-view=""><div class="clearfix full-height small-12 home ng-scope">
+  <div class="left medium-6 columns no-padding use-panel full-height red-light bg-desk-repeat">
+    <a class="full-all full-link h1" href="/use" ui-sref="use"><span>How to USE your health insurance</span></a>
   </div>
-  <div class="columns medium-11 medium-centered large-7">
-    <p>CoveredU.org is an educational tool designed by the Colorado Consumer Health Initiative (CCHI) to help you understand the basics of how health insurance works. We want to make sure people can better understand and use their health insurance so they can get the most for their money and be healthier. CoveredU is for people who don’t understand or have little experience with health insurance. It can also be a tool to refresh your memory about terms or concepts you may have forgotten. The cost estimates used in this tool are based on real health insurance plans, but may be more or less than your actual costs because plan benefits and prices vary based on things like your age and where you live.
-    </p><p>
-    CCHI is a membership based non-partisan, non-profit policy advocacy organization working toward equitable access to quality, affordable health care for all Coloradans. CoveredU is a part of our public education efforts to help consumers get the health care they need, when they need it.
-    </p><p>
-    Learn more about us and our work at&nbsp;<a href="http://www.cohealthinitiative.org" target="_blank">www.cohealthinitiative.org</a>!
-    </p>
-    <br>
-    <h4>And follow us on Facebook and Twitter!</h4>
-    <div class="social-links text-center">
-      <a class="button small secondary" href="http://facebook.com/cohealthaccess" target="_blank"><i class="fa fa-facebook"></i> Visit us on Facebook</a>
-      <a class="button small secondary" href="http://twitter.com/COHealthAccess" target="_blank"><i class="fa fa-twitter"></i> Follow us on Twitter</a>
-    </div>
-    <br>
-    <h4>Check out some of our other special projects:</h4>
-    <ul class="website-links">
-      <li class="segurotu"><a href="http://www.seguroTU.org/" target="_blank">SeguroTU.org: Este sitio en español</a></li>
-      <li class="thanks-obamacare"><a href="http://www.thanksobamacare.org/" target="_blank">ThanksObamacare</a></li>
-      <li class="facebook"><a href="http://doyougotinsurance.com/" target="_blank">Got Insurance!</a></li>
-      <li class="facebook"><a href="http://blueguide.cohealthinitiative.org/" target="_blank">Blue Guide: A Guide to Services for the Uninsured</a></li>
-    </ul>
-    <br>
-    <h4>Site Credits:</h4>
-    <p>Designed and developed by <a target="_blank" href="http://albatrossdigital.com">Albatross Digital</a>.</p>
-
-  </div>
+  <div class="right medium-6 columns no-padding shop-panel full-height blue-light bg-case-repeat">
+    <a class="full-all full-link h1" href="/shop" ui-sref="shop"><span>How to SHOP for health insurance</span></a>
+  </div>  
 </div>
-
-
-
 </main>
 
         <!-- Off Canvas Menu -->
@@ -203,13 +177,13 @@
         <footer class="footer ng-scope" ng-controller="metaInfoCtrl"><div class="row"><div class="columns">
             <div class="left">
               <ul class="inline-list">
-                <li ui-sref-active="active" class="active"><a href="/about" ui-sref="about">About</a></li>
+                <li ui-sref-active="active"><a href="/about" ui-sref="about">About</a></li>
                 <li ui-sref-active="active"><a href="/resources" ui-sref="resources">Resources</a></li>
                 <li><a href="http://www.segurotu.org">En Español</a></li>
               </ul>
             </div>
             <div class="right">
-              Share <div class="share42init" ng-attr-data-url="{{$root.pageUrl}}" ng-attr-data-title="{{pageTitle()}}" ng-attr-data-image="{{$root.pageUrl}}/images/logo.png" data-icons-file="../../images/share42icons.png" ng-attr-data-description="{{metaDescription()}}" data-url="http://coveredu.org" data-title="About | Health Literacy" data-image="http://coveredu.org/images/logo.png" data-description="Health Literacy is an educational site giving straight forward info on healthcare options"><span id="share42"><span class="share42-item" style="display:inline-block;margin:0 6px 6px 0;height:32px;"><a rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0;padding:0;outline:none;background:url(http://localhost:9009/vendor/../../images/share42icons.png) -0px 0 no-repeat" href="#" data-count="fb" onclick="window.open('http://www.facebook.com/sharer.php?m2w&amp;s=100&amp;p[url]=http%3A%2F%2Fcoveredu.org&amp;p[title]=About%20%7C%20Health%20Literacy&amp;p[summary]=Health%20Literacy%20is%20an%20educational%20site%20giving%20straight%20forward%20info%20on%20healthcare%20options&amp;p[images][0]=http%3A%2F%2Fcoveredu.org%2Fimages%2Flogo.png', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=100, top=100, width=550, height=440, toolbar=0, status=0');return false" title="Share on Facebook" target="_blank"></a></span><span class="share42-item" style="display:inline-block;margin:0 6px 6px 0;height:32px;"><a rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0;padding:0;outline:none;background:url(http://localhost:9009/vendor/../../images/share42icons.png) -32px 0 no-repeat" href="#" data-count="pin" onclick="window.open('http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fcoveredu.org&amp;media=http%3A%2F%2Fcoveredu.org%2Fimages%2Flogo.png&amp;description=About%20%7C%20Health%20Literacy', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=100, top=100, width=600, height=300, toolbar=0, status=0');return false" title="Pin It" target="_blank"></a></span><span class="share42-item" style="display:inline-block;margin:0 6px 6px 0;height:32px;"><a rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0;padding:0;outline:none;background:url(http://localhost:9009/vendor/../../images/share42icons.png) -64px 0 no-repeat" href="#" data-count="twi" onclick="window.open('https://twitter.com/intent/tweet?text=About%20%7C%20Health%20Literacy&amp;url=http%3A%2F%2Fcoveredu.org', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=100, top=100, width=550, height=440, toolbar=0, status=0');return false" title="Share on Twitter" target="_blank"></a></span></span></div>
+              Share <div class="share42init" ng-attr-data-url="{{$root.pageUrl}}" ng-attr-data-title="{{pageTitle()}}" ng-attr-data-image="{{$root.pageUrl}}/images/logo.png" data-icons-file="../../images/share42icons.png" ng-attr-data-description="{{metaDescription()}}" data-url="http://coveredu.org" data-title="Health Literacy" data-image="http://coveredu.org/images/logo.png" data-description="Health Literacy is an educational site giving straight forward info on healthcare options"><span id="share42"><span class="share42-item" style="display:inline-block;margin:0 6px 6px 0;height:32px;"><a rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0;padding:0;outline:none;background:url(http://localhost:9009/vendor/../../images/share42icons.png) -0px 0 no-repeat" href="#" data-count="fb" onclick="window.open('http://www.facebook.com/sharer.php?m2w&amp;s=100&amp;p[url]=http%3A%2F%2Fcoveredu.org&amp;p[title]=Health%20Literacy&amp;p[summary]=Health%20Literacy%20is%20an%20educational%20site%20giving%20straight%20forward%20info%20on%20healthcare%20options&amp;p[images][0]=http%3A%2F%2Fcoveredu.org%2Fimages%2Flogo.png', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=100, top=100, width=550, height=440, toolbar=0, status=0');return false" title="Share on Facebook" target="_blank"></a></span><span class="share42-item" style="display:inline-block;margin:0 6px 6px 0;height:32px;"><a rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0;padding:0;outline:none;background:url(http://localhost:9009/vendor/../../images/share42icons.png) -32px 0 no-repeat" href="#" data-count="pin" onclick="window.open('http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fcoveredu.org&amp;media=http%3A%2F%2Fcoveredu.org%2Fimages%2Flogo.png&amp;description=Health%20Literacy', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=100, top=100, width=600, height=300, toolbar=0, status=0');return false" title="Pin It" target="_blank"></a></span><span class="share42-item" style="display:inline-block;margin:0 6px 6px 0;height:32px;"><a rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0;padding:0;outline:none;background:url(http://localhost:9009/vendor/../../images/share42icons.png) -64px 0 no-repeat" href="#" data-count="twi" onclick="window.open('https://twitter.com/intent/tweet?text=Health%20Literacy&amp;url=http%3A%2F%2Fcoveredu.org', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=100, top=100, width=550, height=440, toolbar=0, status=0');return false" title="Share on Twitter" target="_blank"></a></span></span></div>
               <!--<a target="_blank" href="http://twitter.com/COHealthAccess" class="icon-only"><i class="fa fa-twitter"></i> Twitter</a> <a target="_blank" href="http://www.pinterest.com/cohealthaccess/" class="icon-only"><i class="fa fa-pinterest"></i> Pinterest</a> <a target="_blank" href="http://facebook.com/cohealthaccess" class="icon-only"><i class="fa fa-facebook"></i> Facebook</a>-->
             </div>
         </div></div></footer>
