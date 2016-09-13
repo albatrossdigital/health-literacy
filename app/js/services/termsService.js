@@ -27,7 +27,7 @@ angular.module('app.terms')
             },
             {
               'key': 'copay',
-              'regex': 'copay|co\-pay',
+              'regex': 'copays|copay|co\-pay',
               'label': 'Co-pay',
               'text': 'The amount you pay every time you get a health service. For example, if your co-pay for a visit to your family doctor is $20, you will pay that amount every time to visit the doctor. You health insurance plan must cover many preventive services and screenings at no charge to you, so these services do not have a copay.'
             },
