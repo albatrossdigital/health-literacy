@@ -42,7 +42,7 @@ angular.module('app.use', [
           data: { title: 'Pick a Scenario' },
           url: '/scenario',
           templateUrl: 'views/use.scenario.html',
-          controller: function($scope, metaInfo, useData) {
+          controller: function($rootScope, $scope, metaInfo, useData) {
             $scope.pageData = useData;
             $scope.currentPage = 'scenario';
 
@@ -55,7 +55,7 @@ angular.module('app.use', [
           data: { title: 'Where do you go?' },
           url: '/action?scenarioId',
           templateUrl: 'views/use.action.html',
-          controller: function($scope, $stateParams, useData) {
+          controller: function($window, $scope, $stateParams, useData) {
             $scope.pageData = useData;
             $scope.currentPage = 'action';
 
@@ -70,7 +70,7 @@ angular.module('app.use', [
           data: { title: 'Premuims' },
           url: '/premium/:premuimId?scenarioId&actionId',
           templateUrl: 'views/use.premium.html',
-          controller: function($scope, $stateParams, useData, $location) {
+          controller: function($window, $scope, $stateParams, useData, $location) {
 
             var pageData = useData['results'][$stateParams.scenarioId][$stateParams.actionId];
             var premuimId = $stateParams.premuimId;

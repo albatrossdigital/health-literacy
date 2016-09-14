@@ -37,6 +37,15 @@
     &:hover {
       background: rgba(#ffffff, .70);
     }
+
+    &.next-button-primary {
+      background: rgba($orange, .8);
+      color: $white;
+
+      &:hover {
+        background: rgba($orange, 1);
+      }
+    }
   }
 
   .button, i {
@@ -45,21 +54,39 @@
   }
 }
 
+a.link-term {
+  color: $orange !important;
+
+  i {
+    font-size: 16px;
+  }
+}
+
+a.button.use-previous-header {
+  padding: 0;
+  position: absolute;
+  left: 1rem;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
 // *
 // * Media Queries
 // *
 // ******************************************************
 
 
-@media #{$medium-up} {
+@media #{$large-up} {
 
   .next-button {
 
     &:not(.relative) {
       position: absolute;
-      bottom: rem-calc(20);
-      left: 50%;
-      margin-left: -($next-button-width);
+      bottom: 0;
+      left: 0;
+      top: 30%;
     }
   }
 }

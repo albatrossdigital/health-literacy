@@ -4929,11 +4929,11 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
 
 /* Default Link Styles */
 a {
-  color: #ff5722;
+  color: #1976d2;
   text-decoration: none;
   line-height: inherit; }
   a:hover, a:focus {
-    color: #f93a00; }
+    color: #1668b5; }
   a img {
     border: none; }
 
@@ -5960,16 +5960,35 @@ th.hide-for-touch {
     display: block; }
     .next-button .button:hover {
       background: rgba(255, 255, 255, 0.7); }
+    .next-button .button.next-button-primary {
+      background: rgba(255, 87, 34, 0.8);
+      color: #FFFFFF; }
+      .next-button .button.next-button-primary:hover {
+        background: #ff5722; }
   .next-button .button, .next-button i {
     height: 85px;
     width: 85px; }
 
-@media only screen and (min-width:46.9375rem) {
+a.link-term {
+  color: #ff5722 !important; }
+  a.link-term i {
+    font-size: 16px; }
+
+a.button.use-previous-header {
+  padding: 0;
+  position: absolute;
+  left: 1rem;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center; }
+
+@media only screen and (min-width:64.0625rem) {
   .next-button:not(.relative) {
     position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    margin-left: -85px; } }
+    bottom: 0;
+    left: 0;
+    top: 30%; } }
 
 @media only screen and (max-width: 46.875rem) {
   [ui-view]:before, [ui-view]:after {
@@ -6024,7 +6043,7 @@ th.hide-for-touch {
     width: 2em; }
     .header-toggle span span {
       display: block;
-      background-color: #ff5722;
+      background-color: #1976d2;
       top: 0;
       left: 0; }
     .header-toggle span .s1 {
@@ -6119,6 +6138,9 @@ h3 {
 
 p.text-small {
   margin-top: 0; }
+
+.l-header a {
+  color: #ff5722 !important; }
 
 @media only screen and (min-width:46.9375rem) {
   h1, .h1 {
