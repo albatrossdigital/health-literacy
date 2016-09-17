@@ -5946,18 +5946,18 @@ th.hide-for-touch {
     margin-right: 0.5em; }
 
 .next-button {
-  padding-top: 2.5rem;
   overflow: hidden;
   clear: both; }
+  .next-button .next-button-inner {
+    width: 190px; }
   .next-button .button {
     border: 1px solid #ff5722;
     background: rgba(255, 255, 255, 0);
     padding: 0;
     line-height: 85px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: block; }
+    display: block;
+    float: left; }
     .next-button .button:hover {
       background: rgba(255, 255, 255, 0.7); }
     .next-button .button.next-button-primary {
@@ -5965,6 +5965,8 @@ th.hide-for-touch {
       color: #FFFFFF; }
       .next-button .button.next-button-primary:hover {
         background: #ff5722; }
+    .next-button .button.button-left {
+      margin-right: 20px; }
   .next-button .button, .next-button i {
     height: 85px;
     width: 85px; }
@@ -5983,12 +5985,12 @@ a.button.use-previous-header {
   line-height: 60px;
   text-align: center; }
 
-@media only screen and (min-width:64.0625rem) {
+@media only screen and (min-width:46.9375rem) {
   .next-button:not(.relative) {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    top: 30%; } }
+    bottom: 1.25rem;
+    left: 50%;
+    margin-left: -85px; } }
 
 @media only screen and (max-width: 46.875rem) {
   [ui-view]:before, [ui-view]:after {
@@ -6345,7 +6347,7 @@ to prevent collapsing during animation*/
     .small-pad .choice-header {
       padding-top: 0; }
   .big-pad {
-    padding-top: 7.1875rem; }
+    padding-top: 2.5rem; }
   .big-pad-right {
     padding-right: 2.5rem; }
   .full-height.columns {
@@ -6618,7 +6620,7 @@ body > * {
 
 @media only screen and (min-width:46.9375rem) {
   .premium-wrap {
-    padding-bottom: 11.5625rem !important;
+    padding-bottom: 9.375rem !important;
     position: relative; }
   .compare-section-insured {
     padding-left: 2.5rem; }
