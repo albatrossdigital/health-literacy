@@ -5949,7 +5949,9 @@ th.hide-for-touch {
   overflow: hidden;
   clear: both; }
   .next-button .next-button-inner {
-    width: 190px; }
+    width: 190px;
+    margin-left: auto;
+    margin-right: auto; }
   .next-button .button {
     border: 1px solid #ff5722;
     background: rgba(255, 255, 255, 0);
@@ -5983,7 +5985,8 @@ a.button.use-previous-header {
   width: 60px;
   height: 60px;
   line-height: 60px;
-  text-align: center; }
+  text-align: center;
+  margin-top: -5px; }
 
 @media only screen and (min-width:46.9375rem) {
   .next-button:not(.relative) {
