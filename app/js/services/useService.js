@@ -886,7 +886,7 @@ angular.module('app.use')
                     },
                     {
                       text: 'If you\'re getting an annual check up, that\'s a preventive service and you don\'t have to pay a copay.',
-                      img: 'Appendicitis_ER_2.png',
+                      img: 'Routine_Free.png',
                       showCosts: true,
                       hint: ['*IMPORTANT: If you are seen for a problem you are already having, like a cold or minor injury, your visit is not considered a preventive service and you would likely owe a copay.']
                     },
@@ -902,7 +902,7 @@ angular.module('app.use')
                           },
                         ]
                       },
-                      img: 'Appendicitis_ER_3.png',
+                      img: 'Routine_Free2.png',
                       showCosts: true,
                       //hint: ['You pay $4,800 in coinsurance to reach your out-of-pocket maximum and your health insurance pays for the rest!']
                     },
@@ -950,7 +950,7 @@ angular.module('app.use')
                           }
                         ]
                       },
-                      img: 'FeelingSick_Primary_3.png',
+                      img: 'Routine_Recurring.png',
                       showCosts: true,
                       hint: [
                         '*MRI (Magnetic Resonance Imaging) is a body imaging test.'
@@ -984,7 +984,7 @@ angular.module('app.use')
                   'results': {
                     'text': 'Please note: These costs are an example. Actual costs will vary based on your health insurance plan, level of coverage, and where you get your care.'
                   },
-                  img: 'Appendicitis_Primary_1.png'
+                  img: 'Routine_Recurring.png'
                 },
                 {// Routine -  URGENT
                   'stories': [],
@@ -992,7 +992,7 @@ angular.module('app.use')
                   'results': {
                     'text': 'You may be able to get some regular preventive services like an annual check up at Urgent Care, but you\'ll likely have to pay for it. <a href="/use/action?scenarioId=3">Let\'s see what happens</a> when you go to your Primary Care Provider instead.'
                   },
-                  img: 'Appendicitis_Primary_1.png'
+                  img: 'NastyCut_ER_3.png'
                 },
                 {// Routine -  ER
                   'stories': [],
@@ -1000,7 +1000,7 @@ angular.module('app.use')
                   'results': {
                     'text': 'Sorry, the emergency room doesn\'t provide your basic check up or annual physical. <a href="/use/action?scenarioId=3">Go back a step</a> and try another choice.'
                   },
-                  img: 'Appendicitis_Primary_1.png'
+                  img: 'NastyCut_ER_3.png'
                 }
               ]
             ]

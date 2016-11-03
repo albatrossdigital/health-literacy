@@ -108,6 +108,54 @@ angular.module('app.terms')
               'regex': 'referral',
               'label': 'Referral',
               'text': 'A recommendation from a Primary Care Provider to see a specialist. For example, your doctor may give you a referral to see an Ear, Nose, and Throat specialist. With some health insurance plans, you must get a referral from you Primary Care Provider before you can see a specialist.'
+            },
+            {
+              'key': 'hmo',
+              'regex': 'HMO',
+              'label': 'HMO (Health Maintenance Organization)',
+              'text': 'Often the lowest cost type of insurance plan with the most restricted provider network. In an HMO, you are almost always required to first see a primary care provider before you can see a specialist with a referral. An HMO insurance plan will not cover your medical costs if you see a provider that is out-of-network except for in true emergencies when an in-network provider is not available.'
+            },
+            {
+              'key': 'epo',
+              'regex': 'EPO',
+              'label': 'EPO (Exclusive Provider Organization)',
+              'text': 'A low/moderate cost type of insurance plan with a somewhat restricted provider network. You can choose your primary care provider or a specialist you want to see, but there are fewer providers to choose from than in a PPO. An EPO insurance plan will not cover your medical costs if you see a provider that is out-of-network except for in true emergencies when an in-network provider is not available.'
+            },
+            {
+              'key': 'ppo',
+              'regex': 'PPO',
+              'label': 'PPO (Preferred Provider Organization)',
+              'text': 'A higher cost type of insurance plan with a broader network of providers. You can choose a provider you want to see from a larger list of primary care and specialty providers. A PPO may cover some costs if you see an out-of-network provider, but you will pay more to see them (often your out-of-pocket maximum is double for out-of-network care).'
+            },
+            {
+              'key': 'marketplace',
+              'regex': 'marketplace|exchange',
+              'label': 'Marketplace/Exchange',
+              'text': 'This is the website you can use to enroll in health insurance. Some states have their own marketplace like Connect for Health Colorado or Covered California. Others use Healthcare.gov. These marketplaces are the only place you may qualify for financial assistance to reduce your monthly premiums for insurance.',
+            },
+            {
+              'key': 'medicaid',
+              'regex': 'Medicaid',
+              'label': 'Medicaid',
+              'text': 'This is a low cost insurance program managed by your state. Under Obamacare, many states have expanded the population that can qualify for Medicaid, but a some have not. The costs you have to pay under Medicaid depend on your state, but you can often get most health services for very low or no cost. Some states may have changed the program\'s name, for example in Colorado it\'s Health First Colorado, in California it\'s Medi-Cal.'
+            },
+            {
+              'key': 'medicare',
+              'regex': 'Medicare',
+              'label': 'Medicare',
+              'text': 'This is an insurance program for people ages 65+. Medicare covers basic medical expenses, but many people purchase additional coverage so they pay less out of pocket for medical services.'
+            },
+            {
+              'key': 'assistance',
+              'regex': 'financial assistance',
+              'label': 'Financial assistance',
+              'text': 'If you enroll in health insurance through a marketplace or exchange, you may be able to get financial assistance depending on your income. This is a type of tax credit (called Advanced Premium Tax Credit) that can be applied immediately to lower your monthly premiums for health insurance.'
+            },
+            {
+              'key': 'csr',
+              'regex': 'CSR',
+              'label': 'Cost-sharing reductions (CSRs)',
+              'text': 'Some people that qualify for financial assistance may also qualify for cost-sharing reduction (CSRs) health insurance plans. CSRs are based on your income and reduce the amount you have to pay out-of-pocket for copays, coinsurance, and your deductible. If you qualify for CSRs, they can only be applied to silver level insurance plans purchased through the marketplace.'
             }
           ];
           cache.put(callUrl, result);
