@@ -50,6 +50,12 @@
   @include patterning('Appendicitis.jpg');
 }
 
+.bg-routine-repeat,
+.scenario-pattern-3 {
+  @include patterning('routine.jpg');
+}
+
+
 .bg-stethoscope-repeat,
 .action-pattern-0  {
   @include patterning('Primary_care.jpg');
@@ -63,5 +69,4 @@
 .bg-hospital-repeat,
 .action-pattern-2 {
   @include patterning('ER.jpg');
-  
 }
