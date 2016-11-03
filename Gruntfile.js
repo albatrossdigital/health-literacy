@@ -204,7 +204,6 @@ module.exports = function(grunt) {
         src: ['phantomscreenshots.js']
       }
 	  }
-
 	});
 
 	
@@ -218,6 +217,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('gh-pages', ['clean:ghpages', 'copy:ghpages']);
 	
-	grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin', 'connect:distQuick', 'execute']);
+	grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin', 'connect:distQuick']);
 
 };
