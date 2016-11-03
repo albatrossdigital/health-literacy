@@ -153,7 +153,7 @@ angular.module('app.shop')
                   'specialtyCare': '50% *',
                   'copay': '50% *',
                   'hospital': '50% *',
-                  'genericDrugs': '$50% *',
+                  'genericDrugs': '50% *',
                   'specialtyDrugs': '50% *',
                   'xray': '50% *'
                 },
