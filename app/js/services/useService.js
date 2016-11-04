@@ -951,10 +951,7 @@ angular.module('app.use')
                         ]
                       },
                       img: 'Routine_Recurring.png',
-                      showCosts: true,
-                      hint: [
-                        '*MRI (Magnetic Resonance Imaging) is a body imaging test.'
-                      ]
+                      showCosts: true
                     },
                   ],
                   'override': false,
