@@ -13,13 +13,17 @@
 
   i {
     color: $orange;
-    float: right;
+    //float: right;
     line-height: rem-calc(42);
   }
 
   .accordion {
     padding-top: 66px;
   }
+}
+
+.move-right .left-off-canvas-menu h2{
+  position: fixed;
 }
 
 // *

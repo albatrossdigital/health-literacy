@@ -6016,10 +6016,12 @@ a.button.use-previous-header {
   color: white; }
 .left-off-canvas-menu i {
   color: #ff5722;
-  float: right;
   line-height: 2.625rem; }
 .left-off-canvas-menu .accordion {
   padding-top: 66px; }
+
+.move-right .left-off-canvas-menu h2 {
+  position: fixed; }
 
 @media only screen and (min-width:64.0625rem) {
   .move-right > .inner-wrap {
