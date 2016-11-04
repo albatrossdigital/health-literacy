@@ -5878,7 +5878,7 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
-.red-light, .red, .red-dark, .blue-light, .blue, .blue-dark, .reds, .blues, .bg-desk-repeat:after, .bg-case-repeat:after, .bg-thermometer-repeat:after, .scenario-pattern-0:after, .bg-bandaid-repeat:after, .scenario-pattern-1:after, .bg-bed-repeat:after, .scenario-pattern-2:after, .bg-routine-repeat:after, .scenario-pattern-3:after, .bg-stethoscope-repeat:after, .action-pattern-0:after, .bg-nurse-repeat:after, .action-pattern-1:after, .bg-hospital-repeat:after, .action-pattern-2:after {
+.red-light, .red, .red-dark, .blue-light, .blue, .blue-dark, .reds, .blues, .bg-desk-repeat:after, .bg-case-repeat:after, .bg-routine-repeat:after, .scenario-pattern-0:after, .bg-thermometer-repeat:after, .scenario-pattern-1:after, .bg-bandaid-repeat:after, .scenario-pattern-2:after, .bg-bed-repeat:after, .scenario-pattern-3:after, .bg-stethoscope-repeat:after, .action-pattern-0:after, .bg-nurse-repeat:after, .action-pattern-1:after, .bg-hospital-repeat:after, .action-pattern-2:after {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
@@ -6403,7 +6403,7 @@ to prevent collapsing during animation*/
 .white-background {
   background: #fff; }
 
-.bg-desk-repeat:after, .bg-case-repeat:after, .bg-thermometer-repeat:after, .scenario-pattern-0:after, .bg-bandaid-repeat:after, .scenario-pattern-1:after, .bg-bed-repeat:after, .scenario-pattern-2:after, .bg-routine-repeat:after, .scenario-pattern-3:after, .bg-stethoscope-repeat:after, .action-pattern-0:after, .bg-nurse-repeat:after, .action-pattern-1:after, .bg-hospital-repeat:after, .action-pattern-2:after {
+.bg-desk-repeat:after, .bg-case-repeat:after, .bg-routine-repeat:after, .scenario-pattern-0:after, .bg-thermometer-repeat:after, .scenario-pattern-1:after, .bg-bandaid-repeat:after, .scenario-pattern-2:after, .bg-bed-repeat:after, .scenario-pattern-3:after, .bg-stethoscope-repeat:after, .action-pattern-0:after, .bg-nurse-repeat:after, .action-pattern-1:after, .bg-hospital-repeat:after, .action-pattern-2:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -6411,7 +6411,7 @@ to prevent collapsing during animation*/
   display: block;
   bottom: 0;
   right: 0; }
-.bg-desk-repeat:hover:after, .bg-case-repeat:hover:after, .bg-thermometer-repeat:hover:after, .scenario-pattern-0:hover:after, .bg-bandaid-repeat:hover:after, .scenario-pattern-1:hover:after, .bg-bed-repeat:hover:after, .scenario-pattern-2:hover:after, .bg-routine-repeat:hover:after, .scenario-pattern-3:hover:after, .bg-stethoscope-repeat:hover:after, .action-pattern-0:hover:after, .bg-nurse-repeat:hover:after, .action-pattern-1:hover:after, .bg-hospital-repeat:hover:after, .action-pattern-2:hover:after {
+.bg-desk-repeat:hover:after, .bg-case-repeat:hover:after, .bg-routine-repeat:hover:after, .scenario-pattern-0:hover:after, .bg-thermometer-repeat:hover:after, .scenario-pattern-1:hover:after, .bg-bandaid-repeat:hover:after, .scenario-pattern-2:hover:after, .bg-bed-repeat:hover:after, .scenario-pattern-3:hover:after, .bg-stethoscope-repeat:hover:after, .action-pattern-0:hover:after, .bg-nurse-repeat:hover:after, .action-pattern-1:hover:after, .bg-hospital-repeat:hover:after, .action-pattern-2:hover:after {
   opacity: 0.5; }
 
 .bg-desk-repeat:after {
@@ -6420,17 +6420,17 @@ to prevent collapsing during animation*/
 .bg-case-repeat:after {
   background: url("../images/patterns/How_to_shop_health_insurance.jpg") repeat; }
 
-.bg-thermometer-repeat:after, .scenario-pattern-0:after {
+.bg-routine-repeat:after, .scenario-pattern-0:after {
+  background: url("../images/patterns/routine.jpg") repeat; }
+
+.bg-thermometer-repeat:after, .scenario-pattern-1:after {
   background: url("../images/patterns/feeling_sick.jpg") repeat; }
 
-.bg-bandaid-repeat:after, .scenario-pattern-1:after {
+.bg-bandaid-repeat:after, .scenario-pattern-2:after {
   background: url("../images/patterns/Nasty_cut.jpg") repeat; }
 
-.bg-bed-repeat:after, .scenario-pattern-2:after {
+.bg-bed-repeat:after, .scenario-pattern-3:after {
   background: url("../images/patterns/Appendicitis.jpg") repeat; }
-
-.bg-routine-repeat:after, .scenario-pattern-3:after {
-  background: url("../images/patterns/routine.jpg") repeat; }
 
 .bg-stethoscope-repeat:after, .action-pattern-0:after {
   background: url("../images/patterns/Primary_care.jpg") repeat; }

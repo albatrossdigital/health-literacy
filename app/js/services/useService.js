@@ -23,6 +23,10 @@ angular.module('app.use')
               'title': 'Pick a scenario',
               'options': [
                 {
+                  'title': 'Time for your annual check up',
+                  'id': 'routine'
+                },
+                {
                   'title': 'Feeling a little sick',
                   'id': 'sick'
                 },
@@ -33,10 +37,6 @@ angular.module('app.use')
                 {
                   'title': 'Might have appendicitis',
                   'id': 'major'
-                },
-                {
-                  'title': 'Time for your annual check up',
-                  'id': 'routine'
                 }
               ],
             },
@@ -58,6 +58,131 @@ angular.module('app.use')
               ],
             },
             'results': [
+              [// Routine (annual check-up)
+                {// Routine - PRIMARY
+                  'stories': [
+                    {
+                      text: 'You’ve been paying your monthly premium of $275 for health insurance, so you have coverage when you need health care.',
+                      img: 'PayingPremium_1.png',
+                      showCosts: false,
+                      hint: false
+                    },
+                    {
+                      text: 'If you\'re getting an annual check up, that\'s a preventive service and you don\'t have to pay a copay.',
+                      img: 'Routine_Free.png',
+                      showCosts: true,
+                      hint: ['*IMPORTANT: If you are seen for a problem you are already having, like a cold or minor injury, your visit is not considered a preventive service and you would likely owe a copay.']
+                    },
+                    {
+                      text: 'During your annual check up, your primary care provider may be able to provide additional preventive services with no copays (like a sexually transmitted infection (STI) screening, a depression screening, checking your cholesterol or for diabetes, birth control prescription, etc.). You get your general STI screening, blood test, and a flu vaccine to bring your immune system up to date.',
+                      costs: {
+                        'insured': [
+                          {
+                            label: "Copay",
+                            group: 'overall',
+                            amount: 0,
+                            skipCount: true
+                          },
+                        ]
+                      },
+                      img: 'Routine_Free2.png',
+                      showCosts: true,
+                      //hint: ['You pay $4,800 in coinsurance to reach your out-of-pocket maximum and your health insurance pays for the rest!']
+                    },
+                    {
+                      text: 'Your blood test comes back and your blood sugar is a bit high. Your primary care provider encourages you to eat healthier and exercise regularly to prevent diabetes. Your provider wants you to come back next year for your annual visit to see how you\'re doing. Congratulations! You\'ve just established a relationship with a primary care provider, which can make it easier to be seen on short notice if you get sick so you can avoid higher costs from urgent care or the emergency room.',
+                      costs: {
+                        'insured': [
+                          {
+                            'label': 'Annual Check Up',
+                            group: "annual",
+                            amount: 0 
+                          },
+                          {
+                            'label': 'Annual Blood Test',
+                            group: 'blood',
+                            amount: 0
+                          },
+                          {
+                            'label': 'Annual STI Test',
+                            group: 'sti',
+                            amount: 0
+                          },
+                          {
+                            'label': 'Vaccine',
+                            group: 'vaccine',
+                            amount: 0
+                          }
+                        ],
+                        'uninsured' : [
+                          {
+                            group: "annual",
+                            amount: 160 
+                          },
+                          {
+                            group: 'blood',
+                            amount: 200
+                          },
+                          {
+                            group: 'sti',
+                            amount: 200
+                          },
+                          {
+                            group: 'vaccine',
+                            amount: 35
+                          }
+                        ]
+                      },
+                      img: 'Routine_Recurring.png',
+                      showCosts: true
+                    },
+                  ],
+                  'override': false,
+                  'groups': {
+                    'annual': {
+                      'label': 'Annual Check Up',
+                      'weight': 1
+                    },
+                    'blood': {
+                      'label': 'Annual Blood Test',
+                      'weight': 2
+                    },
+                    'sti': {
+                      'label': 'Annual STI Test',
+                      'weight': 3
+                    },
+                    'vaccine': {
+                      'label': 'Vaccine',
+                      'weight': 4
+                    },
+                    'overall': {
+                      'label': 'Overall',
+                      'weight': 3,
+                      'hide': true
+                    }
+                  },
+                  'results': {
+                    'text': 'Please note: These costs are an example. Actual costs will vary based on your health insurance plan, level of coverage, and where you get your care.'
+                  },
+                  img: 'Routine_Recurring.png'
+                },
+                {// Routine -  URGENT
+                  'stories': [],
+                  'override': true,
+                  'results': {
+                    'text': 'You may be able to get some regular preventive services like an annual check up at Urgent Care, but you\'ll likely have to pay for it. <a href="/use/action?scenarioId=3">Let\'s see what happens</a> when you go to your Primary Care Provider instead.'
+                  },
+                  img: 'NastyCut_ER_3.png'
+                },
+                {// Routine -  ER
+                  'stories': [],
+                  'override': true,
+                  'results': {
+                    'text': 'Sorry, the emergency room doesn\'t provide your basic check up or annual physical. <a href="/use/action?scenarioId=3">Go back a step</a> and try another choice.'
+                  },
+                  img: 'NastyCut_ER_3.png'
+                }
+              ],
               [// Feeling Sick
                 {// Feeling Sick - PRIMARY
                   'stories': [
@@ -874,131 +999,6 @@ angular.module('app.use')
                     'hint': 'Please note: These costs are an example. Actual costs will vary based on your health insurance plan, level of coverage, and where you get your care.'
                   }
                 } 
-              ],
-              [// Routine (annual check-up)
-                {// Routine - PRIMARY
-                  'stories': [
-                    {
-                      text: 'You’ve been paying your monthly premium of $275 for health insurance, so you have coverage when you need health care.',
-                      img: 'PayingPremium_1.png',
-                      showCosts: false,
-                      hint: false
-                    },
-                    {
-                      text: 'If you\'re getting an annual check up, that\'s a preventive service and you don\'t have to pay a copay.',
-                      img: 'Routine_Free.png',
-                      showCosts: true,
-                      hint: ['*IMPORTANT: If you are seen for a problem you are already having, like a cold or minor injury, your visit is not considered a preventive service and you would likely owe a copay.']
-                    },
-                    {
-                      text: 'During your annual check up, your primary care provider may be able to provide additional preventive services with no copays (like a sexually transmitted infection (STI) screening, a depression screening, checking your cholesterol or for diabetes, birth control prescription, etc.). You get your general STI screening, blood test, and a flu vaccine to bring your immune system up to date.',
-                      costs: {
-                        'insured': [
-                          {
-                            label: "Copay",
-                            group: 'overall',
-                            amount: 0,
-                            skipCount: true
-                          },
-                        ]
-                      },
-                      img: 'Routine_Free2.png',
-                      showCosts: true,
-                      //hint: ['You pay $4,800 in coinsurance to reach your out-of-pocket maximum and your health insurance pays for the rest!']
-                    },
-                    {
-                      text: 'Your blood test comes back and your blood sugar is a bit high. Your primary care provider encourages you to eat healthier and exercise regularly to prevent diabetes. Your provider wants you to come back next year for your annual visit to see how you\'re doing. Congratulations! You\'ve just established a relationship with a primary care provider, which can make it easier to be seen on short notice if you get sick so you can avoid higher costs from urgent care or the emergency room.',
-                      costs: {
-                        'insured': [
-                          {
-                            'label': 'Annual Check Up',
-                            group: "annual",
-                            amount: 0 
-                          },
-                          {
-                            'label': 'Annual Blood Test',
-                            group: 'blood',
-                            amount: 0
-                          },
-                          {
-                            'label': 'Annual STI Test',
-                            group: 'sti',
-                            amount: 0
-                          },
-                          {
-                            'label': 'Vaccine',
-                            group: 'vaccine',
-                            amount: 0
-                          }
-                        ],
-                        'uninsured' : [
-                          {
-                            group: "annual",
-                            amount: 160 
-                          },
-                          {
-                            group: 'blood',
-                            amount: 200
-                          },
-                          {
-                            group: 'sti',
-                            amount: 200
-                          },
-                          {
-                            group: 'vaccine',
-                            amount: 35
-                          }
-                        ]
-                      },
-                      img: 'Routine_Recurring.png',
-                      showCosts: true
-                    },
-                  ],
-                  'override': false,
-                  'groups': {
-                    'annual': {
-                      'label': 'Annual Check Up',
-                      'weight': 1
-                    },
-                    'blood': {
-                      'label': 'Annual Blood Test',
-                      'weight': 2
-                    },
-                    'sti': {
-                      'label': 'Annual STI Test',
-                      'weight': 3
-                    },
-                    'vaccine': {
-                      'label': 'Vaccine',
-                      'weight': 4
-                    },
-                    'overall': {
-                      'label': 'Overall',
-                      'weight': 3,
-                      'hide': true
-                    }
-                  },
-                  'results': {
-                    'text': 'Please note: These costs are an example. Actual costs will vary based on your health insurance plan, level of coverage, and where you get your care.'
-                  },
-                  img: 'Routine_Recurring.png'
-                },
-                {// Routine -  URGENT
-                  'stories': [],
-                  'override': true,
-                  'results': {
-                    'text': 'You may be able to get some regular preventive services like an annual check up at Urgent Care, but you\'ll likely have to pay for it. <a href="/use/action?scenarioId=3">Let\'s see what happens</a> when you go to your Primary Care Provider instead.'
-                  },
-                  img: 'NastyCut_ER_3.png'
-                },
-                {// Routine -  ER
-                  'stories': [],
-                  'override': true,
-                  'results': {
-                    'text': 'Sorry, the emergency room doesn\'t provide your basic check up or annual physical. <a href="/use/action?scenarioId=3">Go back a step</a> and try another choice.'
-                  },
-                  img: 'NastyCut_ER_3.png'
-                }
               ]
             ]
           };
