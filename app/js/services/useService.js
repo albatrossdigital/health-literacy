@@ -170,7 +170,7 @@ angular.module('app.use')
                   'stories': [],
                   'override': true,
                   'results': {
-                    'text': 'You may be able to get some regular preventive services like an annual check up at Urgent Care, but you\'ll likely have to pay for it. <a href="/use/action?scenarioId=3">Let\'s see what happens</a> when you go to your Primary Care Provider instead.'
+                    'text': 'You may be able to get some regular preventive services like an annual check up at Urgent Care, but you\'ll likely have to pay for it. <a href="/use/action?scenarioId=0">Let\'s see what happens</a> when you go to your Primary Care Provider instead.'
                   },
                   img: 'NastyCut_ER_3.png'
                 },
