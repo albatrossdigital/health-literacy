@@ -62,7 +62,7 @@ angular.module('app.use')
                 {// Routine - PRIMARY
                   'stories': [
                     {
-                      text: 'You’ve been paying your monthly premium of $275 for health insurance, so you have coverage when you need health care.',
+                      text: 'You\'ve been paying your monthly premium of $275 for health insurance, so you have coverage when you need health care.',
                       img: 'PayingPremium_1.png',
                       showCosts: false,
                       hint: false
@@ -178,7 +178,7 @@ angular.module('app.use')
                   'stories': [],
                   'override': true,
                   'results': {
-                    'text': 'Sorry, the emergency room doesn\'t provide your basic check up or annual physical. <a href="/use/action?scenarioId=3">Go back a step</a> and try another choice.'
+                    'text': 'Sorry, the emergency room doesn\'t provide your basic check up or annual physical. <a href="/use/action?scenarioId=0">Go back a step</a> and try another choice.'
                   },
                   img: 'NastyCut_ER_3.png'
                 }
@@ -882,7 +882,7 @@ angular.module('app.use')
                 {// Appendicitis - ER
                   'stories': [
                     {
-                      text: 'You’ve been paying your monthly premium of $275 for health insurance, so you have coverage when you need health care.',
+                      text: 'You\'ve been paying your monthly premium of $275 for health insurance, so you have coverage when you need health care.',
                       costs: {
                         'insured': [
                           /*{

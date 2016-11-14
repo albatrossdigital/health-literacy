@@ -90,8 +90,6 @@ angular.module('app.use', [
             // Load story
             $scope.story = pageData.stories[premuimId];
 
-            console.log(pageData);
-
             // Do we show "if you'd gone to doctor" ?
             if($stateParams.scenarioId < 2 && $stateParams.actionId > 0) {
 

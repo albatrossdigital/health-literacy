@@ -131,7 +131,7 @@ angular.module('app.terms')
               'key': 'marketplace',
               'regex': 'marketplace|exchange',
               'label': 'Marketplace/Exchange',
-              'text': 'This is the website you can use to enroll in health insurance. Some states have their own marketplace like Connect for Health Colorado or Covered California. Others use Healthcare.gov. These marketplaces are the only place you may qualify for financial assistance to reduce your monthly premiums for insurance.',
+              'text': 'This is the website you can use to enroll in health insurance. Some states have their own marketplace like Connect for Health Colorado or Covered California. Others use Healthcare.gov. These marketplaces are the only place you may qualify for financial assistance to reduce your monthly premiums for insurance.'
             },
             {
               'key': 'medicaid',
